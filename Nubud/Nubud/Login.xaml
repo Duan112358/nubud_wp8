@@ -1,0 +1,73 @@
+﻿<phone:PhoneApplicationPage x:Class="Nubud.Login"
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                            FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                            FontSize="{StaticResource PhoneFontSizeNormal}"
+                            Foreground="{StaticResource PhoneContrastForegroundBrush}"
+                            SupportedOrientations="Portrait"
+                            Orientation="Portrait"
+                            mc:Ignorable="d"
+                            shell:SystemTray.BackgroundColor="LimeGreen"
+                            shell:SystemTray.IsVisible="True">
+    <shell:SystemTray.ProgressIndicator>
+        <shell:ProgressIndicator IsIndeterminate="{Binding IsLoading}"
+                                 IsVisible="True"
+                                 Text="{Binding LocalizedResources.Nubud, Source={StaticResource LocalizedStrings}}" />
+    </shell:SystemTray.ProgressIndicator>
+    <Grid x:Name="LayoutRoot"
+          Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0"
+                    Margin="12,17,0,28"
+                    Orientation="Horizontal">
+            <TextBlock Style="{StaticResource PhoneTextTitle1Style}"
+                       HorizontalAlignment="Left"
+                       Name="PageTitle"
+                       Text="{Binding Path=LocalizedResources.Login,Source={StaticResource LocalizedStrings}}" />
+            <Image Source="/Assets/logo.png"
+                   Margin="20, 0,0,0"
+                   Height="75"
+                   HorizontalAlignment="Center" />
+        </StackPanel>
+
+        <StackPanel DataContext="{Binding LoginModel}"
+                    Grid.Row="1">
+            <toolkit:PhoneTextBox Name="Email"
+                                  PlaceholderText="{Binding Path=LocalizedResources.YourEmail,Source={StaticResource LocalizedStrings}}"
+                                  Text="{Binding Email, Mode=TwoWay}" />
+            <toolkit:PhonePasswordBox Name="Password"
+                                      PlaceholderText="{Binding Path=LocalizedResources.YourPassword,Source={StaticResource LocalizedStrings}}"
+                                      AllowShowPassword="False"
+                                      Password="{Binding Password, Mode=TwoWay}"
+                                      KeyDown="ConfirmPassword_KeyUp" />
+            <toolkit:PhonePasswordBox Name="ConfirmPassword"
+                                      Password="{Binding ConfirmPassword, Mode=TwoWay}"
+                                      PlaceholderText="{Binding Path=LocalizedResources.ConfirmPassword,Source={StaticResource LocalizedStrings}}"
+                                      Visibility="Collapsed"
+                                      KeyUp="ConfirmPassword_KeyUp" />
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <Button Content="{Binding Path= LocalizedResources.Login, Source={StaticResource LocalizedStrings}}"
+                    Name="LoginAction"
+                    Click="LoginAction_Click"
+                    HorizontalAlignment="Stretch" />
+            <HyperlinkButton Content="{Binding Path= LocalizedResources.Register, Source={StaticResource LocalizedStrings}}"
+                             Click="ToggleRegisterModel_Click"
+                             HorizontalContentAlignment="Right"
+                             HorizontalAlignment="Stretch"
+                             Name="LoginLink" />
+        </StackPanel>
+    </Grid>
+
+</phone:PhoneApplicationPage>

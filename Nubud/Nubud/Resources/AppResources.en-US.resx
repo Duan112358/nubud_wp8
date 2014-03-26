@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ResourceFlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+    <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
+  </data>
+  <data name="ResourceLanguage" xml:space="preserve">
+    <value>en-US</value>
+    <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
+  </data>
+  <data name="Nubud" xml:space="preserve">
+    <value>Nubud</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>login</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>register</value>
+  </data>
+  <data name="Archived" xml:space="preserve">
+    <value>Archived</value>
+  </data>
+  <data name="Articles" xml:space="preserve">
+    <value>Articles</value>
+  </data>
+  <data name="Dismiss" xml:space="preserve">
+    <value>Dismiss</value>
+  </data>
+  <data name="Favorited" xml:space="preserve">
+    <value>Favorited</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Not a valid email address.</value>
+  </data>
+  <data name="LoginError" xml:space="preserve">
+    <value>Email or password is not correct.</value>
+  </data>
+  <data name="LoginHelperText" xml:space="preserve">
+    <value>Already has an account ?</value>
+  </data>
+  <data name="PasswordError" xml:space="preserve">
+    <value>Password and confirmed password not match.</value>
+  </data>
+  <data name="RegisterHelperText" xml:space="preserve">
+    <value>New to Nubud ?</value>
+  </data>
+  <data name="EmptyError" xml:space="preserve">
+    <value>Email and password cannot be empty.</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Company :</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Nubud is featured on offline reading, just as Pocket on Android and IOS. It anaylizes and filters the content to bring you an good reading experience. </value>
+  </data>
+  <data name="DoubleTapExit" xml:space="preserve">
+    <value>Go back by double tap</value>
+  </data>
+  <data name="FontSample" xml:space="preserve">
+    <value>Welcome to Nubud. This is current font size preview. </value>
+  </data>
+  <data name="FontSize" xml:space="preserve">
+    <value>Set the font size of article details page.</value>
+  </data>
+  <data name="Large" xml:space="preserve">
+    <value>Large</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="Medium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="RateMe" xml:space="preserve">
+    <value>Rate me in the store</value>
+  </data>
+  <data name="Reading" xml:space="preserve">
+    <value>Reading</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="Small" xml:space="preserve">
+    <value>Small</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>add</value>
+  </data>
+  <data name="AddUrl" xml:space="preserve">
+    <value>Add new article</value>
+  </data>
+  <data name="ChooseTheme" xml:space="preserve">
+    <value>Theme setting.</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>refresh</value>
+  </data>
+  <data name="AddError" xml:space="preserve">
+    <value>We cannot process the content related to the url at present, please retry later.</value>
+  </data>
+  <data name="InvalidUrl" xml:space="preserve">
+    <value>Not a valid url. A valid url is start with 'http://' or 'https://'</value>
+  </data>
+  <data name="NetworkError" xml:space="preserve">
+    <value>Network connection is not available at current.</value>
+  </data>
+  <data name="OfficalSite" xml:space="preserve">
+    <value>http://beta.nubud.net</value>
+  </data>
+  <data name="CompanySite" xml:space="preserve">
+    <value>http://www.generpoint.com</value>
+  </data>
+  <data name="Offical" xml:space="preserve">
+    <value>Officalsite :</value>
+  </data>
+  <data name="Website" xml:space="preserve">
+    <value>http://beta.nubud.com</value>
+  </data>
+  <data name="FeedbackTo" xml:space="preserve">
+    <value>duan112358@gmail.com</value>
+  </data>
+  <data name="ClearCache" xml:space="preserve">
+    <value>Clear cache</value>
+  </data>
+  <data name="ClearCacheMessage" xml:space="preserve">
+    <value>Cache cleared.</value>
+  </data>
+  <data name="NotCached" xml:space="preserve">
+    <value>Current article content has't been cached.</value>
+  </data>
+  <data name="Archive" xml:space="preserve">
+    <value>archive</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>delete</value>
+  </data>
+  <data name="Original" xml:space="preserve">
+    <value>original</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>share</value>
+  </data>
+  <data name="SomethingWrong" xml:space="preserve">
+    <value>Something is wrong.</value>
+  </data>
+  <data name="UnArchive" xml:space="preserve">
+    <value>unarchive</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>successed!</value>
+  </data>
+  <data name="YourEmail" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="YourPassword" xml:space="preserve">
+    <value>password</value>
+  </data>
+  <data name="ConfirmPassowrd" xml:space="preserve">
+    <value>confirm password</value>
+  </data>
+</root>

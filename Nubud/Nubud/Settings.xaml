@@ -1,0 +1,102 @@
+﻿<toolkit:BasePage xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                  xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                  xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  mc:Ignorable="d"
+                  x:Class="Nubud.Settings"
+                  FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                  FontSize="{StaticResource PhoneFontSizeNormal}"
+                  Foreground="{StaticResource PhoneForegroundBrush}"
+                  SupportedOrientations="Portrait"
+                  Orientation="Portrait"
+                  shell:SystemTray.BackgroundColor="LimeGreen"
+                  shell:SystemTray.IsVisible="True">
+
+    <shell:SystemTray.ProgressIndicator>
+        <shell:ProgressIndicator IsVisible="True"
+                                 Text="{Binding LocalizedResources.Nubud, Source={StaticResource LocalizedStrings}}" />
+    </shell:SystemTray.ProgressIndicator>
+    <Grid x:Name="LayoutRoot"
+          Background="Transparent">
+        <phone:Pivot DataContext="{Binding}">
+            <phone:PivotItem Header="{Binding LocalizedResources.General, Source={StaticResource LocalizedStrings}}">
+                <StackPanel>
+                    <TextBlock Text="{Binding LocalizedResources.ChooseTheme, Source={StaticResource LocalizedStrings}}"
+                               HorizontalAlignment="Stretch"
+                               TextWrapping="Wrap" />
+                    <toolkit:RadioButtonGroup toolkit:SlideInEffect.LineIndex="1"
+                                              x:Name="Theme">
+                        <RadioButton Content="{Binding LocalizedResources.Dark, Source={StaticResource LocalizedStrings}}"
+                                     IsChecked="{Binding Theme, ConverterParameter=DARK, Converter={StaticResource TBConverter}, Mode=TwoWay}" />
+                        <RadioButton Content="{Binding LocalizedResources.Light, Source={StaticResource LocalizedStrings}}"
+                                     IsChecked="{Binding Theme, ConverterParameter=LIGHT, Converter={StaticResource TBConverter}, Mode=TwoWay}" />
+                    </toolkit:RadioButtonGroup>
+
+                    <TextBlock Text="{Binding LocalizedResources.FontSize, Source={StaticResource LocalizedStrings}}"
+                               HorizontalAlignment="Stretch"
+                               TextWrapping="Wrap" />
+                    <toolkit:RadioButtonGroup Foreground="{StaticResource PhoneForegroundBrush}"
+                                              x:Name="Reading">
+                        <RadioButton toolkit:SlideInEffect.LineIndex="1"
+                                     Content="{Binding LocalizedResources.Small, Source={StaticResource LocalizedStrings}}"
+                                     IsChecked="{Binding FontSize, ConverterParameter=SMALL, Converter={StaticResource FSConverter}, Mode=TwoWay}" />
+                        <RadioButton toolkit:SlideInEffect.LineIndex="2"
+                                     Content="{Binding LocalizedResources.Medium, Source={StaticResource LocalizedStrings}}"
+                                     IsChecked="{Binding FontSize, ConverterParameter=MEDIUM, Converter={StaticResource FSConverter}, Mode=TwoWay}" />
+                        <RadioButton toolkit:SlideInEffect.LineIndex="3"
+                                     Content="{Binding LocalizedResources.Large, Source={StaticResource LocalizedStrings}}"
+                                     IsChecked="{Binding FontSize, ConverterParameter=LARGE, Converter={StaticResource FSConverter}, Mode=TwoWay}" />
+                    </toolkit:RadioButtonGroup>
+                    <TextBlock Text="{Binding LocalizedResources.FontSample, Source={StaticResource LocalizedStrings}}"
+                               FontSize="{Binding FontSize}"
+                               TextWrapping="Wrap"
+                               toolkit:SlideInEffect.LineIndex="1" />
+                    <Button Content="{Binding Path=LocalizedResources.ClearCache, Source={StaticResource LocalizedStrings}}"
+                            x:Name="ClearCache"
+                            Click="ClearCache_Click" />
+                </StackPanel>
+            </phone:PivotItem>
+            <phone:PivotItem Header="{Binding LocalizedResources.About, Source={StaticResource LocalizedStrings}}">
+                <Grid>
+                    <Image Source="/Assets/logo.png"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Top"
+                           Height="100"
+                           toolkit:SlideInEffect.LineIndex="1"
+                           Margin="178,36,178,0" />
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="{Binding LocalizedResources.Description, Source={StaticResource LocalizedStrings}}"
+                                   toolkit:SlideInEffect.LineIndex="2"
+                                   TextWrapping="Wrap" />
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="0,10,0,0"
+                                       Foreground="LimeGreen"
+                                       Text="{Binding LocalizedResources.Offical, Source={StaticResource LocalizedStrings}}"
+                                       toolkit:SlideInEffect.LineIndex="3"
+                                       TextWrapping="Wrap" />
+                            <HyperlinkButton x:Name="Offical"
+                                             Click="Offical_Click"
+                                             Content="{Binding LocalizedResources.OfficalSite, Source={StaticResource LocalizedStrings}}" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="0,10,0,0"
+                                       Foreground="LimeGreen"
+                                       Text="{Binding LocalizedResources.Company, Source={StaticResource LocalizedStrings}}"
+                                       toolkit:SlideInEffect.LineIndex="3"
+                                       TextWrapping="Wrap" />
+                            <HyperlinkButton x:Name="Company"
+                                             Click="Company_Click"
+                                             Content="{Binding LocalizedResources.CompanySite, Source={StaticResource LocalizedStrings}}" />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+
+</toolkit:BasePage>
